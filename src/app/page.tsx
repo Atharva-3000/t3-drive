@@ -8,7 +8,7 @@ import Link from "next/link"
 import { Button } from "~/components/ui/button"
 
 export default function GoogleDriveClone() {
-  const [currentFolder, setCurrentFolder] = useState<string | null>(null)
+  const [currentFolder, setCurrentFolder]  = useState<string | null>(null)
 
   const getCurrentFiles = () => {
     return mockFiles.filter((file) => file.parent === currentFolder)
