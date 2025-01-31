@@ -16,6 +16,22 @@ jobs:
         shell: bash
         run: find . -type f -name ".env.example" -exec sh -c 'cp "$1" "${1%.*}"' _ {} \;
 
+      - name: Set up environment variables
+        run: |
+          echo "SINGLESTORE_USER=$SINGLESTORE_USER" >> $GITHUB_ENV
+          echo "SINGLESTORE_PASS=$SINGLESTORE_PASS" >> $GITHUB_ENV
+          echo "SINGLESTORE_HOST=$SINGLESTORE_HOST" >> $GITHUB_ENV
+          echo "SINGLESTORE_PORT=$SINGLESTORE_PORT" >> $GITHUB_ENV
+          echo "SINGLESTORE_DB_NAME=$SINGLESTORE_DB_NAME" >> $GITHUB_ENV
+
+      - name: Print environment variables
+        run: |
+          echo "SINGLESTORE_USER=$SINGLESTORE_USER"
+          echo "SINGLESTORE_PASS=$SINGLESTORE_PASS"
+          echo "SINGLESTORE_HOST=$SINGLESTORE_HOST"
+          echo "SINGLESTORE_PORT=$SINGLESTORE_PORT"
+          echo "SINGLESTORE_DB_NAME=$SINGLESTORE_DB_NAME"
+
       - name: Typecheck
         run: bun typecheck
 
