@@ -2,7 +2,7 @@
 
 ## TODO
 
-- [ ] Set up databse and data model
+- [x] Set up databse and data model
 - [ ] Move folder open state to URL
 - [ ] Add auth
 - [ ] Add file uploading
@@ -12,7 +12,7 @@
 ### 31-01-2025
 
 Finished connecting up the database, next:
-- [ ] Update schema to show files and folders
-- [ ] Manually insert some data
-- [ ] Render them on the UI
-- [ ] Push and make sure it all works
+- [x] Update schema to show files and folders
+- [x] Manually insert some data
+- [x] Render them on the UI
+- [x] Push and make sure it all works
