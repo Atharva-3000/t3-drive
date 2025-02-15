@@ -51,17 +51,17 @@ export default function GoogleDriveClone() {
             <Button
               onClick={() => setCurrentFolder("root")}
               variant="ghost"
-              className="text-gray-300 hover:text-white mr-2"
+              className="text-gray-300 hover:text-black mr-2"
             >
               My Drive
             </Button>
             {breadcrums.map((folder, index) => (
-              <div key={folder.id} className="flex items-center">
+              <div key={folder.id} className="flex items-cent er">
                 <ChevronRight className="mx-2 text-gray-500" size={16} />
                 <Button
                   onClick={() => handleFolderClick(folder.id)}
                   variant="ghost"
-                  className="text-gray-300 hover:text-white"
+                  className="text-gray-300 hover:text-black"
                 >
                   {folder.name}
                 </Button>
