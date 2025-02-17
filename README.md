@@ -20,6 +20,6 @@ Finished connecting up the database, next:
 
 ### 17-02-2025
 
-- [ ] Change the folders to link components, remove all client states.
+- [x] Change the folders to link components, remove all client states.
 - [ ] Clean up the database and data fetching patterns.
 - [ ] Real HomePage
