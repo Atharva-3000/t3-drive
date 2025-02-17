@@ -1,5 +1,5 @@
 import { db } from "~/server/db"
-import { files as filesSchema, folders as foldersSchema } from "~/server/db/schema"
+import { files_table as filesSchema, folders_table as foldersSchema } from "~/server/db/schema"
 import DriveContents from "../../drive-contents";
 import { eq } from "drizzle-orm";
 
@@ -40,5 +40,5 @@ export default async function GoogleDriveClone(
 
     const [folders, files, parents] = await Promise.all([foldersPromise, filesPromise, parentsPromise]);
 
-    return <DriveContents files={files} folders={folders} parents={parents}/>
+    return <DriveContents files={files} folders={folders} parents={parents} />
 }
