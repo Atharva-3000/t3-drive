@@ -1,5 +1,7 @@
 # Drive powered by T3
 
+**STRAIGHT UP PRODUCTION LEVEL CODE**
+
 ## TODO
 
 - [x] Set up databse and data model
@@ -21,5 +23,5 @@ Finished connecting up the database, next:
 ### 17-02-2025
 
 - [x] Change the folders to link components, remove all client states.
-- [ ] Clean up the database and data fetching patterns.
+- [X] Clean up the database and data fetching patterns.
 - [ ] Real HomePage
