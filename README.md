@@ -3,9 +3,10 @@
 ## TODO
 
 - [x] Set up databse and data model
-- [ ] Move folder open state to URL
+- [x] Move folder open state to URL
 - [ ] Add auth
 - [ ] Add file uploading
+- [ ] Add Analytics (posthog)
 
 ## Notes
 
@@ -16,3 +17,9 @@ Finished connecting up the database, next:
 - [x] Manually insert some data
 - [x] Render them on the UI
 - [x] Push and make sure it all works
+
+### 17-02-2025
+
+- [ ] Change the folders to link components, remove all client states.
+- [ ] Clean up the database and data fetching patterns.
+- [ ] Real HomePage
