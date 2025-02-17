@@ -6,8 +6,8 @@
 
 - [x] Set up databse and data model
 - [x] Move folder open state to URL
-- [ ] Add auth
-- [ ] Add file uploading
+- [x] Add auth
+- [x] Add file uploading
 - [ ] Add Analytics (posthog)
 
 ## Notes
@@ -25,3 +25,8 @@ Finished connecting up the database, next:
 - [x] Change the folders to link components, remove all client states.
 - [X] Clean up the database and data fetching patterns.
 - [ ] Real HomePage
+
+### 18-02-2025
+- [ ] Upload files to the right folder.
+- [ ] Delete files button.
+- [ ] Allow files other than images to be uploaded as well.
