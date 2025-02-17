@@ -4,6 +4,21 @@ import DriveContents from "../../drive-contents";
 import { eq } from "drizzle-orm";
 
 
+async function getAllParents(folderId: number) {
+    const parents = [];
+    let currentFolderId: number | null = folderId;
+    while (currentFolderId !== null) {
+        const folder = await db.selectDistinct().from(foldersSchema).where(eq(foldersSchema.id, currentFolderId));
+
+        if (!folder[0]) {
+            throw new Error("Parent folder not found");
+        }
+        parents.unshift(folder[0]);
+        currentFolderId = folder[0]?.parent;
+    }
+    return parents;
+}
+
 export default async function GoogleDriveClone(
 
     // next.js changed the way to get the params for dynamic routing
@@ -17,9 +32,13 @@ export default async function GoogleDriveClone(
         return <div>Invalid Folder Id</div>
     }
 
-    const folders = await db.select().from(foldersSchema).where(eq(foldersSchema.parent, parsedFolderId));
+    const foldersPromise = db.select().from(foldersSchema).where(eq(foldersSchema.parent, parsedFolderId));
 
-    const files = await db.select().from(filesSchema).where(eq(filesSchema.parent, parsedFolderId));
+    const filesPromise = db.select().from(filesSchema).where(eq(filesSchema.parent, parsedFolderId));
 
-    return <DriveContents files={files} folders={folders} />
+    const parentsPromise = getAllParents(parsedFolderId);
+
+    const [folders, files, parents] = await Promise.all([foldersPromise, filesPromise, parentsPromise]);
+
+    return <DriveContents files={files} folders={folders} parents={parents}/>
 }
