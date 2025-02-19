@@ -31,4 +31,4 @@ Finished connecting up the database, next:
 - [x] Add ownership to the uploaded files
 - [x] Upload files to the right folder.
 - [ ] Delete files button.
-- [ ] Allow files other than images to be uploaded as well.
+- [x] Allow files other than images to be uploaded as well.
