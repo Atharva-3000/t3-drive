@@ -6,7 +6,7 @@ import animate from "tailwindcss-animate";
 
 export default withUt({
     darkMode: ["class"],
-    content: ["./src/**/*.tsx"],
+    content: ["./src/**/*.{ts,tsx,mdx}",'./node_modules/@uploadthing/react/dist/**/*.{js,ts,jsx,tsx}' ],
   theme: {
   	extend: {
   		fontFamily: {

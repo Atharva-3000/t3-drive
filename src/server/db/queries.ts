@@ -28,18 +28,25 @@ export const QUERIES = {
 
     getFiles: function (folderId: number) {
         return db.select().from(filesSchema).where(eq(filesSchema.parent, folderId));
+    },
+
+    getFolderById: async function (folderId: number) {
+        const folder = await db.select().from(foldersSchema).where(eq(foldersSchema.id, folderId));
+
+        return folder[0];
     }
 };
 
 export const MUTATIONS = {
-    createFile: async function(input:{file:{
-        name: string,
-        size: number,
-        url: string,
-        parent: number,
-    };
-    userId: string;
-}){
-    return await db.insert(filesSchema).values({...input.file, parent:input.file.parent});
+    createFile: async function (input: {
+        file: {
+            name: string,
+            size: number,
+            url: string,
+            parent: number,
+        };
+        userId: string;
+    }) {
+        return await db.insert(filesSchema).values({ ...input.file, ownerId: input.userId });
     },
 };

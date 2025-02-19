@@ -27,6 +27,8 @@ Finished connecting up the database, next:
 - [ ] Real HomePage
 
 ### 18-02-2025
-- [ ] Upload files to the right folder.
+
+- [x] Add ownership to the uploaded files
+- [x] Upload files to the right folder.
 - [ ] Delete files button.
 - [ ] Allow files other than images to be uploaded as well.
