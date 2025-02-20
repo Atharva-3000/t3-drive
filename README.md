@@ -24,7 +24,7 @@ Finished connecting up the database, next:
 
 - [x] Change the folders to link components, remove all client states.
 - [X] Clean up the database and data fetching patterns.
-- [ ] Real HomePage
+- [ ] Real HomePage + onboarding
 
 ### 18-02-2025
 
